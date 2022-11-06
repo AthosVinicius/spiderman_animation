@@ -1,0 +1,68 @@
+html,
+body {
+  background: #0575e6;
+  background: -webkit-linear-gradient(to bottom, #021b79, #0575e6);
+  background: linear-gradient(to bottom, #021b79, #0575e6);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Ruslan Display", cursive;
+  font-size: 52px;
+  color: #ffcc66;
+  text-shadow: 1px 1px 0 red;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#container .spiderman {
+  width: 300px;
+  vertical-align: top;
+  margin-top: -60px;
+  animation: spiderman-animation;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+#container .shadow {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 20px;
+  width: 200px;
+  border-radius: 50%;
+  animation: shadow-animation;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+img {
+  max-width: 100%;
+}
+
+@keyframes spiderman-animation {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(1);
+  }
+}
+
+@keyframes shadow-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.6);
+    opacity: 0.2;
+  }
+}
